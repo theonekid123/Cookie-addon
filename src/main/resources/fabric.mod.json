@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "cookie-addon",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for Meteor Client addons.",
+  "name": "Cookie Addon",
+  "description": "A delicious cookie-themed addon for Meteor Client.",
   "authors": [
-    "seasnail"
+    "sublarp"
   ],
   "contact": {
-    "sources": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "sources": "https://github.com/yourusername/cookie-addon"
   },
-  "icon": "assets/template/icon.png",
+  "icon": "assets/cookie-addon/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.AddonTemplate"
+      "com.yourname.cookieaddon.CookieAddon"
     ]
   },
   "mixins": [
-    "addon-template.mixins.json"
+    "cookie-addon.mixins.json"
   ],
   "custom": {
-    "meteor-client:color": "225,25,25",
+    "meteor-client:color": "210,180,140",
     "modmenu": {
       "parent": {
         "id": "meteor-client"
@@ -29,8 +29,8 @@
     }
   },
   "depends": {
-    "java": ">=${jdk_version}",
-    "minecraft": "${minecraft_version}",
+    "java": ">=17",
+    "minecraft": "1.21.11",
     "meteor-client": "*"
   }
 }
