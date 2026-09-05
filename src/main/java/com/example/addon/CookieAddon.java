@@ -1,4 +1,4 @@
-package com.yourname.cookieaddon;
+package com.example.addon;
 
 import com.yourname.cookieaddon.modules.SwingSpeed;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
