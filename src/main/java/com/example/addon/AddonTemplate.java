@@ -1,35 +1,24 @@
-package com.example.addon;
+package com.yourname.cookieaddon;
 
-import com.example.addon.commands.CommandExample;
-import com.example.addon.hud.HudExample;
-import com.example.addon.modules.ModuleExample;
-import com.mojang.logging.LogUtils;
-import meteordevelopment.meteorclient.addons.GithubRepo;
+import com.yourname.cookieaddon.modules.SwingSpeed;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
-import meteordevelopment.meteorclient.commands.Commands;
-import meteordevelopment.meteorclient.systems.hud.Hud;
-import meteordevelopment.meteorclient.systems.hud.HudGroup;
 import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class AddonTemplate extends MeteorAddon {
-    public static final Logger LOG = LogUtils.getLogger();
-    public static final Category CATEGORY = new Category("Example");
-    public static final HudGroup HUD_GROUP = new HudGroup("Example");
+public class CookieAddon extends MeteorAddon {
+    public static final Logger LOG = LoggerFactory.getLogger("cookie-addon");
+    public static final Category CATEGORY = new Category("Cookie Addon");
 
     @Override
     public void onInitialize() {
-        LOG.info("Initializing Meteor Addon Template");
+        LOG.info("Initializing Cookie Addon");
 
-        // Modules
-        Modules.get().add(new ModuleExample());
+        // Register the Swing Speed module
+        Modules.get().add(new SwingSpeed());
 
-        // Commands
-        Commands.add(new CommandExample());
-
-        // HUD
-        Hud.get().register(HudExample.INFO);
+        LOG.info("Cookie Addon initialized successfully!");
     }
 
     @Override
@@ -39,11 +28,6 @@ public class AddonTemplate extends MeteorAddon {
 
     @Override
     public String getPackage() {
-        return "com.example.addon";
-    }
-
-    @Override
-    public GithubRepo getRepo() {
-        return new GithubRepo("MeteorDevelopment", "meteor-addon-template");
+        return "com.yourname.cookieaddon";
     }
 }
