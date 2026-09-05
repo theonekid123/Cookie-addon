@@ -1,6 +1,6 @@
-package com.yourname.cookieaddon.modules;
+package com.example.addon; 
 
-import com.yourname.cookieaddon.CookieAddon;
+import com.example.addon.CookieAddon;  
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.events.world.TickEvent;
 import meteordevelopment.meteorclient.settings.DoubleSetting;
