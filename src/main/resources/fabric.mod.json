@@ -1,25 +1,22 @@
 {
   "schemaVersion": 1,
   "id": "cookie-addon",
-  "version": "${version}",
+  "version": "1.0.0",
   "name": "Cookie Addon",
   "description": "A delicious cookie-themed addon for Meteor Client.",
   "authors": [
     "sublarp"
   ],
   "contact": {
-    "sources": "https://github.com/yourusername/cookie-addon"
+    "sources": "https://github.com/sublarp/cookie-addon"
   },
   "icon": "assets/cookie-addon/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.yourname.cookieaddon.CookieAddon"
+      "com.example.addon.CookieAddon"
     ]
   },
-  "mixins": [
-    "cookie-addon.mixins.json"
-  ],
   "custom": {
     "meteor-client:color": "210,180,140",
     "modmenu": {
@@ -29,7 +26,7 @@
     }
   },
   "depends": {
-    "java": ">=17",
+    "java": ">=21",
     "minecraft": "1.21.11",
     "meteor-client": "*"
   }
